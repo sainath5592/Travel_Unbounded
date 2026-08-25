@@ -1,193 +1,342 @@
-# 🏔️ Travel Unbounded - Full-Stack Experiential Travel Platform
+🏔️ Travel Unbounded
 
-<p align="center">
-  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Travel Unbounded Hero Banner" width="100%" style="border-radius: 12px;" />
-</p>
+India's Most Trusted Experiential Travel Experts
+Extraordinary journeys, personally crafted around the people taking them.
 
-<p align="center">
-  <strong>India's Most Trusted Experiential Travel Experts</strong><br />
-  <em>Extraordinary journeys, personally crafted around the people taking them.</em>
-</p>
+A premium full-stack experiential travel website built with Next.js, TypeScript, Tailwind CSS, MongoDB, and Mongoose.
 
-<p align="center">
-  <a href="#-tech-stack"><img src="https://img.shields.io/badge/Next.js-14%20App%20Router-black?style=for-the-badge&logo=next.js" alt="Next.js 14" /></a>
-  <a href="#-tech-stack"><img src="https://img.shields.io/badge/TypeScript-5.4-blue?style=for-the-badge&logo=typescript" alt="TypeScript" /></a>
-  <a href="#-tech-stack"><img src="https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind CSS" /></a>
-  <a href="#-database-schema"><img src="https://img.shields.io/badge/MongoDB_Atlas-Mongoose-47A248?style=for-the-badge&logo=mongodb" alt="MongoDB Atlas" /></a>
-  <a href="#-license"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" /></a>
-</p>
+📖 Overview
 
----
+Travel Unbounded is a modern travel platform designed to showcase curated travel experiences across India and international destinations.
 
-## 📖 Overview
+The platform allows users to:
 
-**Travel Unbounded** is a production-quality, full-stack experiential travel website designed for modern travelers seeking curated expeditions across India and iconic international destinations. Headquartered in **Bengaluru** with regional hubs in **Kochi** and **Nairobi**, Travel Unbounded offers tailor-made itineraries, expert local guides, and 24x7 trip support.
+Explore curated travel destinations
+Search and filter destinations
+Learn about the company and its office locations
+Submit travel booking enquiries
+Receive client-side and server-side validation feedback
+Store booking enquiries securely in MongoDB
+✨ Features
+🏠 Home Page
+Immersive hero section
+Travel-focused call-to-action buttons
+Featured Indian destinations
+Featured international destinations
+Why Choose Us section
+Final travel enquiry CTA section
+🌍 Destinations
 
-This project is built using the **Next.js 14 App Router**, **TypeScript**, **Tailwind CSS**, and **MongoDB with Mongoose**.
+Explore 10 curated destinations.
 
----
+India
 
-## ✨ Features
+Kerala
+Himachal Pradesh
+Ladakh
+Andaman
+Goa
 
-- 🌟 **Immersive Hero & Visual Brand**: Full-screen imagery with dark overlays, typography, and CTA flows.
-- 📍 **Curated Destinations Grid**:
-  - **India**: Kerala, Himachal Pradesh, Ladakh, Andaman Islands, Goa.
-  - **International**: Kenya, Vietnam, Tanzania, Iceland, Sri Lanka.
-- 🔍 **Real-Time Search & Category Filters**: Search destinations by name or country with instant tab filtering (**All**, **India**, **International**).
-- 📝 **Interactive Booking Enquiry Form**:
-  - Validated inputs for Full Name, Country Code, Contact Number, Email, Date of Travel (future dates only), Hotel Category (Standard, Deluxe, Luxury), Number of People ($\ge 1$), Number of Children ($\ge 0$), and Destination.
-  - Client-side & server-side validation.
-  - Custom Toast notification popups (no browser `alert()`).
-  - Active submission loading indicators.
-- ⚡ **Backend API & MongoDB Integration**: `POST /api/enquiry` saves validated booking enquiries directly to **MongoDB Atlas**, with an optional `GET /api/enquiry` route for viewing enquiries.
-- 🏢 **About & Global Presence**: Detailed company story and exact office addresses for Bengaluru HQ, Kochi, and Nairobi.
-- 📱 **Fully Responsive**: Mobile-first architecture with custom hamburger menu drawer and tablet/desktop layouts.
+International
 
----
+Kenya
+Vietnam
+Tanzania
+Iceland
+Sri Lanka
 
-## 🛠️ Tech Stack
+Additional functionality:
 
-| Layer | Technology |
-| :--- | :--- |
-| **Framework** | [Next.js 14 (App Router)](https://nextjs.org/) |
-| **Language** | [TypeScript](https://www.typescriptlang.org/) |
-| **Styling** | [Tailwind CSS](https://tailwindcss.com/) |
-| **Icons** | [Lucide React](https://lucide.dev/) |
-| **Database** | [MongoDB Atlas](https://www.mongodb.com/atlas) with [Mongoose ODM](https://mongoosejs.com/) |
-| **API Layer** | Next.js Serverless Route Handlers (`app/api/enquiry/route.ts`) |
+Search destinations by name or country
+Filter by All, India, or International
+View destination details
+Start an enquiry for a selected destination
+🏢 About Page
+Travel Unbounded company story
+Company values
+Office locations
 
----
+Bengaluru — Headquarters
 
-## 📁 Project Structure
+541, 7th Main Rd
+HAL 2nd Stage
+Indiranagar, Bengaluru – 560008
+India
 
-```text
+Kochi — Kerala Office
+
+LR Towers, S Janatha Road
+Palavivatton, Kochi – 682025
+India
+
+Nairobi — Kenya Office
+
+Westpark Towers, Muthithi Road
+Nairobi, P.O. Box 6950
+Postal Code 00100
+Kenya
+
+📝 Booking Enquiry Form
+
+The booking form includes:
+
+Full Name
+Country Code
+Contact Number
+Email
+Destination
+Date of Travel
+Number of People
+Hotel Category
+Number of Children
+
+Validation includes:
+
+Required field validation
+Email validation
+Phone number validation
+Future travel date validation
+Minimum 1 traveller
+Minimum 0 children
+Client-side validation
+Server-side validation
+🔔 User Experience
+Loading state during form submission
+Success and error notifications
+No browser alert() usage
+Responsive mobile navigation
+Mobile, tablet, and desktop support
+🗄️ Backend and Database
+POST /api/enquiry for submitting booking enquiries
+MongoDB database integration
+Mongoose schema validation
+Secure environment variable configuration
+Database connection caching for Next.js
+
+GET /api/enquiry is included as an optional bonus feature for retrieving enquiries.
+
+🛠️ Tech Stack
+Technology	Purpose
+Next.js	Full-stack React framework
+TypeScript	Type-safe development
+Tailwind CSS	Styling and responsive design
+MongoDB	Database
+Mongoose	MongoDB object modeling
+Lucide React	Icons
+Next.js Route Handlers	Backend API
+React Hooks	Client-side state management
+📁 Project Structure
 travel-unbounded/
+│
 ├── app/
 │   ├── about/
-│   │   └── page.tsx              # About Page & office locations
+│   │   └── page.tsx
+│   │
 │   ├── api/
 │   │   └── enquiry/
-│   │       └── route.ts          # POST & GET booking enquiry route handlers
+│   │       └── route.ts
+│   │
 │   ├── contact/
-│   │   └── page.tsx              # Booking enquiry page
+│   │   └── page.tsx
+│   │
 │   ├── destinations/
-│   │   └── page.tsx              # Interactive searchable destinations grid
-│   ├── globals.css               # Global styles & keyframe animations
-│   ├── layout.tsx                # Root layout, fonts, Navbar & Footer
-│   └── page.tsx                  # Home Page
+│   │   └── page.tsx
+│   │
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
 ├── components/
-│   ├── BookingForm.tsx           # Validated booking enquiry form
-│   ├── CTASection.tsx            # High-impact CTA banner
-│   ├── DestinationCard.tsx       # Destination card component
-│   ├── DestinationGrid.tsx       # Category filter & search grid
-│   ├── Footer.tsx                # Footer with copyright & links
-│   ├── Hero.tsx                  # Full-screen hero section
-│   ├── Navbar.tsx                # Sticky navbar with mobile drawer
-│   ├── OfficeLocations.tsx       # Office locations component
-│   ├── Toast.tsx                 # Toast notification component
-│   └── WhyChooseUs.tsx           # 4 value proposition pillars
+│   ├── BookingForm.tsx
+│   ├── CTASection.tsx
+│   ├── DestinationCard.tsx
+│   ├── DestinationGrid.tsx
+│   ├── Footer.tsx
+│   ├── Hero.tsx
+│   ├── Navbar.tsx
+│   ├── OfficeLocations.tsx
+│   ├── Toast.tsx
+│   └── WhyChooseUs.tsx
+│
 ├── data/
-│   └── destinations.ts           # Curated dataset (10 destinations)
+│   └── destinations.ts
+│
 ├── lib/
-│   └── mongodb.ts                # Mongoose connection caching & DNS fallback
+│   └── mongodb.ts
+│
 ├── models/
-│   └── Enquiry.ts                # Mongoose Enquiry schema & model
+│   └── Enquiry.ts
+│
 ├── types/
-│   └── index.ts                  # TypeScript interfaces
-├── .env.local                    # Environment variables (MONGODB_URI)
-├── next.config.js                # Next.js image domain configuration
-├── package.json                  # Dependencies & scripts
-├── tailwind.config.ts            # Tailwind custom colors & fonts
-├── tsconfig.json                 # TypeScript configuration
-└── README.md                     # Documentation
-```
+│   └── index.ts
+│
+├── .env.example
+├── .gitignore
+├── next.config.js
+├── package.json
+├── tailwind.config.ts
+├── tsconfig.json
+└── README.md
+🔑 Environment Variables
 
----
+Create a .env.local file in the project root:
 
-## 🔑 Environment Setup
+MONGODB_URI=your_mongodb_connection_string
+Example
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/travel_unbounded?retryWrites=true&w=majority
 
-Create a `.env.local` file in the root directory:
+⚠️ Never commit .env.local or real MongoDB credentials to GitHub.
 
-```env
-MONGODB_URI=mongodb+srv://<username>:<password>@<cluster-host>.mongodb.net/travel_unbounded?retryWrites=true&w=majority
-```
+Your .gitignore should contain:
 
----
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
-```bash
+.env
+.env.local
+node_modules
+.next
+🚀 Getting Started
+1. Clone the Repository
 git clone https://github.com/sainath5592/Travel_Unbounded.git
+2. Navigate to the Project
 cd Travel_Unbounded
-```
-
-### 2. Install dependencies
-```bash
+3. Install Dependencies
 npm install
-```
+4. Configure Environment Variables
 
-### 3. Run the development server
-```bash
+Create a .env.local file and add your MongoDB connection string:
+
+MONGODB_URI=your_mongodb_connection_string
+5. Start the Development Server
 npm run dev
-```
 
-Open **[http://localhost:3000](http://localhost:3000)** in your browser.
+Open:
 
----
+http://localhost:3000
+🔌 API Documentation
+Submit a Booking Enquiry
 
-## 🔌 API Endpoints
+Endpoint
 
-### 1. Submit Booking Enquiry
-- **POST** `/api/enquiry`
-- **Content-Type**: `application/json`
-- **Body**:
-  ```json
-  {
-    "fullName": "Rahul Sharma",
-    "countryCode": "+91",
-    "contactNumber": "9876543210",
-    "email": "rahul@example.com",
-    "destination": "Kerala",
-    "travelDate": "2026-11-15",
-    "numberOfPeople": 2,
-    "hotelCategory": "Deluxe",
-    "numberOfChildren": 0
-  }
-  ```
-- **Response (201 Created)**:
-  ```json
-  {
-    "success": true,
-    "message": "Thank you! Our travel expert will contact you within 24 hours.",
-    "data": { "id": "6a8daacc24d935fa0827839e" }
-  }
-  ```
+POST /api/enquiry
 
-### 2. Retrieve Enquiries (Bonus Admin Route)
-- **GET** `/api/enquiry`
-- **Response (200 OK)**:
-  ```json
-  {
-    "success": true,
-    "count": 2,
-    "data": [ ... ]
-  }
-  ```
+Content-Type
 
----
+application/json
+Example Request
+{
+  "fullName": "Rahul Sharma",
+  "countryCode": "+91",
+  "contactNumber": "9876543210",
+  "email": "rahul@example.com",
+  "destination": "Kerala",
+  "travelDate": "2026-11-15",
+  "numberOfPeople": 2,
+  "hotelCategory": "Deluxe",
+  "numberOfChildren": 0
+}
+Example Success Response
+{
+  "success": true,
+  "message": "Thank you! Our travel expert will contact you within 24 hours."
+}
+📋 Database Schema
 
-## 🌐 Deployment (Vercel)
+Each enquiry is stored with the following structure:
 
-This Next.js App Router application is optimized for one-click deployment on **Vercel**:
+Enquiry
+│
+├── fullName
+├── countryCode
+├── contactNumber
+├── email
+├── destination
+├── travelDate
+├── numberOfPeople
+├── hotelCategory
+├── numberOfChildren
+└── createdAt
 
-1. Push your repository to GitHub.
-2. Import your repository into [Vercel](https://vercel.com).
-3. Add `MONGODB_URI` in **Environment Variables**.
-4. Deploy!
+Validation rules:
 
----
+fullName — Required
+countryCode — Required
+contactNumber — Required
+email — Required and valid
+destination — Required
+travelDate — Required and must be a future date
+numberOfPeople — Minimum 1
+hotelCategory — Standard, Deluxe, or Luxury
+numberOfChildren — Minimum 0
+🧪 Testing Checklist
 
-## 📄 Copyright & Licensing
+Before deployment, verify:
 
-© 2026 **Travel Unbounded**. All rights reserved.
+ All pages load correctly
+ Navigation links work
+ Mobile navigation works
+ Destination search works
+ Destination filters work
+ Booking form validation works
+ Invalid emails are rejected
+ Past travel dates are rejected
+ Number of people cannot be less than 1
+ Number of children cannot be negative
+ Successful enquiries are saved to MongoDB
+ Success and error messages display correctly
+ Website works on mobile, tablet, and desktop
+ npm run build completes successfully
+
+Run the production build check:
+
+npm run build
+🌐 Deployment
+
+This project can be deployed on Vercel.
+
+Deployment Steps
+Push the project to GitHub.
+Import the repository into Vercel.
+Add the required environment variable:
+MONGODB_URI
+Deploy the application.
+Test the live website and booking enquiry form.
+🔍 SEO
+
+Each page includes appropriate metadata such as:
+
+Page title
+Meta description
+Semantic heading structure
+
+Pages include:
+
+Home
+Destinations
+About
+Contact
+🎯 Assignment Requirements Covered
+Next.js App Router
+TypeScript
+Tailwind CSS
+Responsive design
+Reusable React components
+India and international destinations
+About page and office locations
+Booking enquiry form
+Client-side validation
+Server-side validation
+MongoDB database integration
+Next.js API Route Handler
+Success and error handling
+Basic SEO metadata
+Complete project documentation
+📄 License
+
+This project was created as part of a technical assignment.
+
+© 2026 Travel Unbounded. All rights reserved.
+
+Important
+
+Before pasting this, change this line if the GitHub username/repository is not yours:
+
+git clone https://github.com/sainath5592/Travel_Unbounded.git
